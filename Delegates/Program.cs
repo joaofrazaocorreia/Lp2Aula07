@@ -14,13 +14,11 @@ namespace Delegates
             Console.WriteLine(str.ToLower());
         }
 
-        private delegate void Printer(string str);
-
         private static void Main()
         {
             Joiner joiner = new Joiner("The first String!");
 
-            Printer stringPrinter = PrintUpper;
+            Action<string> stringPrinter = PrintUpper;
             stringPrinter += PrintLower;
             stringPrinter += joiner.JoinAndPrint;
 
