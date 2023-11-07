@@ -13,6 +13,7 @@ namespace Observers
         public FileSaver(string name)
         {
             fileName = name;
+            File.Delete(fileName);
         }
 
 
